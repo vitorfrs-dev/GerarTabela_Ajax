@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tabelas</title>
+	<meta charset="utf-8">
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700" rel="stylesheet">
+
+	<link rel="stylesheet" href="estilos.css">
+</head>
+
+
+<body>
+
+	<div class = "container">
+
+
+	<article class = "intro">
+		<h1 class = "sectionTitle">Gerar tabela com javascript</h1>
+
+		<p>Quando o botão for clicado irá disparar uma função que irá criar uma
+		tabela, os dados da tabela estão armazenados em um array de objetos onde cada objeto
+		"pessoa" possui as propriedades nome, idade e gênero. </p>
+
+		<h2>Requisição Ajax</h2>
+		<p>O array onde estão armazenados os objeto "pessoa" na verdade é um arquivo <strong>JSON</strong> que está no servidor, quando o usuário clica no botão é feita uma requisição <strong>AJAX</strong> por meio do objeto <strong>XMLHttpRequest</strong>, e os dados vão para o array, e a função "gerarTabela" é invocada.</p>
+
+		<p>Quando  função "gerarTabela" é disparada ela itera por cada
+			objeto do array e extrai cada uma de suas propriedades, e as passa como parâmetros
+			da função createRow, que cria uma nova row com o nome, idade e gênero da pessoa, e
+			 por fim adiciona essa row na tabela.</p>
+	</article>
+
+	
+
+</div><!--End of container-->
+
+	<div class = "container">
+		<div class = "centered">
+			<h1 class="sectionTitle">Clique no botão para gerar a tabela</h1>
+		
+			<button class="btn" id="btnGerarTabela">Gerar tabela</button>
+		</div>
+
+		<table id="nameTable">
+			<tr>
+				<th>Nome</th>
+				<th>Idade</th>
+				<th>Gênero</th>
+			</tr>
+		</table>
+	</div>
+
+	<script src="Gerar tabela.js"></script>
+
+</body>
+</html>
